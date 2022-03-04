@@ -41,6 +41,12 @@ func main() {
 			text = ""
 		}
 		sort.Slice(lines, func(i, j int) bool {
+			if lines[i][2] != "Etc" && lines[j][2] == "Etc" {
+				return true
+			}
+			if lines[i][2] == "Etc" && lines[j][2] != "Etc" {
+				return false
+			}
 			if lines[i][2] < lines[j][2] {
 				return true
 			}
