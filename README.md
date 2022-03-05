@@ -1,6 +1,6 @@
 # sort-awesome-twitter-communities
 
-Formattter of [awesome-twitter-communities](https://github.com/mattn/awesome-twitter-communities)
+Formatter of [awesome-twitter-communities](https://github.com/mattn/awesome-twitter-communities)
 
 ## Build
 
