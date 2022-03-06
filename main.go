@@ -34,6 +34,9 @@ func main() {
 			if len(cells) < 2 {
 				break
 			}
+			for i, cell := range cells {
+				cells[i] = strings.TrimSpace(cell)
+			}
 			if strings.HasPrefix(cells[4], "http") {
 				cells[4] = "<" + cells[4] + ">"
 			}
