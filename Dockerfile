@@ -5,6 +5,6 @@ ADD . /go/src/app
 
 RUN go build -o /go/bin/app
 
-FROM gcr.io/distroless/base-debian10
+FROM scratch
 COPY --from=build /go/bin/app /
 CMD ["/app"]
