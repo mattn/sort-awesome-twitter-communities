@@ -1,10 +1,10 @@
-FROM golang:1.16-buster as build
+FROM golang:1.18-alpine AS build-env
 
 WORKDIR /go/src/app
 ADD . /go/src/app
 
-RUN go build -o /go/bin/app
+RUN go build -buildvcs=false --trimpath -o /go/bin/app
 
 FROM scratch
-COPY --from=build /go/bin/app /
+COPY --from=build-env /go/bin/app /
 CMD ["/app"]
